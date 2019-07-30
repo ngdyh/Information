@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="form-signin" id="register_form">
+    {% csrf_token %}
+    <h2 class="form-signin-heading">用户注册</h2>
+    <div class="login-wrap">
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.password2 }}
+        {{ form.mobile }}
+        {{ form.mobile_captcha }}
+        <input type="button" value="发送短信" class="btn btn-info" style="height:38px;width: 125px;"/>
+        <button class="btn btn-lg btn-login btn-block" type="button" id="register_btn">注册</button>
+        <label class="checkbox">
+            <span class="pull-right"> 已有帐号， <a href="{% url 'accounts:login' %}"> 请登录 </a></span>
+        </label>
+        <div class="alert alert-block alert-danger fade in">
+            <button data-dismiss="alert" class="close close-sm" type="button">
+                <i class="icon-remove"></i>
+            </button>
+            <strong>提醒!</strong> 错误提示信息~~
+        </div>
+    </div>
+</form>
+</body>
+</html>
