@@ -24,5 +24,6 @@ urlpatterns = [
     url(r'^logtest/$', views.logtest, name="logtest"),
     url(r'^index/',include('apps.repo.urls',namespace='index')),
     url(r'^accounts/', include('apps.accounts.urls', namespace="accounts")),
+    url(r'^apis/', include('apps.apis.urls', namespace="apis")),
 
 ]
