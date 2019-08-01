@@ -130,6 +130,9 @@ STATICFILES_DIRS=[
 AUTH_USER_MODEL = 'accounts.User'
 # 注意：如果扩展了User一定需要指定AUTH_USER_MODEL
 
+# Fontpath
+FontPath = os.path.join(BASE_DIR, 'static/fonts')
+
 
 CACHES = {
     'default': {
@@ -209,6 +212,7 @@ LOGGING = {
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 5,
             'formatter': 'standard',
+            'encoding': 'gbk'
         },
         'apis_handler': {
             'level': 'DEBUG',

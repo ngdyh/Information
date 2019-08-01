@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^accounts/', include('apps.accounts.urls', namespace="accounts")),
     url(r'^apis/', include('apps.apis.urls', namespace="apis")),
 
+
 ]
